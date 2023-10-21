@@ -21,6 +21,8 @@ builder.Services.AddSwaggerGen(options =>
     options.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));
 });
 
+builder.Services.AddTransient<ISearchService, SearchService>();
+
 builder.Services.AddControllers();
 
 // Настройка приложения.

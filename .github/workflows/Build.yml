@@ -1,0 +1,46 @@
+name: Build
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Установка .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+
+    - name: Восстановление зависимостей
+      run: dotnet restore
+      working-directory: ./src
+
+    - name: Сборка проекта
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ./src
+
+  build-ubuntu:
+    runs-on: ubuntu-latest
+  
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Установка .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 7.0.x
+  
+    - name: Восстановление зависимостей
+      run: dotnet restore
+      working-directory: ./src
+  
+    - name: Сборка проекта
+      run: dotnet build --configuration Release --no-restore
+      working-directory: ./src

@@ -14,11 +14,11 @@ public class SearchService : ISearchService
 
         if (!BinarySearch.TryFindElementIndex(sortedData, elementToFind, out var index))
         {
-            elementIndex = index;
-
-            return true;
+            return false;
         }
 
-        return false;
+        elementIndex = index;
+
+        return true;
     }
 }

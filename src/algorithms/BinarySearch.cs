@@ -46,13 +46,13 @@ public static class BinarySearch
             }
         }
 
-        if (sortedData[leftLimit] == elementToFind)
+        if (sortedData[leftLimit] != elementToFind)
         {
-            elementIndex = leftLimit;
-
-            return true;
+            return false;
         }
 
-        return false;
+        elementIndex = leftLimit;
+
+        return true;
     }
 }

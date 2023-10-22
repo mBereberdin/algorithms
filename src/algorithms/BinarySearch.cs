@@ -16,6 +16,11 @@ public static class BinarySearch
     {
         elementIndex = -1;
 
+        if (sortedData.Length is 0)
+        {
+            return false;
+        }
+
         var leftLimit = 0;
         var rightLimit = sortedData.Length - 1;
 

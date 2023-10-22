@@ -1,6 +1,7 @@
 namespace SearchMachine.Services.Implementations;
 
 using algorithms;
+using algorithms.Searches;
 
 using SearchMachine.Services.Interfaces;
 

@@ -22,6 +22,7 @@ builder.Services.AddSwaggerGen(options =>
 });
 
 builder.Services.AddTransient<ISearchService, SearchService>();
+builder.Services.AddTransient<ISortService, SortService>();
 
 builder.Services.AddControllers();
 

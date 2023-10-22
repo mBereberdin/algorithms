@@ -1,4 +1,4 @@
-﻿namespace algorithms;
+﻿namespace algorithms.Searches;
 
 /// <summary>
 /// Бинарный поиск.

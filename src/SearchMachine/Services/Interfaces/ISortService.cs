@@ -6,7 +6,7 @@ namespace SearchMachine.Services.Interfaces;
 public interface ISortService
 {
     /// <summary>
-    /// Отсортировать коллекцию.
+    /// Отсортировать коллекцию алгоритмом выборки.
     /// </summary>
     /// <param name="unsortedData">Неотсортированная коллекция.</param>
     /// <returns>Отсортированная коллекция.</returns>
